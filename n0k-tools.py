@@ -1,6 +1,10 @@
 #!/usr/bin/python3
 
-print('''
+import colorama
+from colorama import Fore, Back, Style
+colorama.init(autoreset=True)
+
+print(f'''{Fore.MAGENTA}
 ███╗   ██╗ ██████╗ ██╗  ██╗  ████████╗ ██████╗  ██████╗ ██╗     ███████╗
 ████╗  ██║██╔═████╗██║ ██╔╝  ╚══██╔══╝██╔═══██╗██╔═══██╗██║     ██╔════╝
 ██╔██╗ ██║██║██╔██║█████╔╝█████╗██║   ██║   ██║██║   ██║██║     ███████╗
@@ -11,7 +15,7 @@ print('''
                                                 ''')
 
 
-a = input('Do you want to install all the tools?\n[Y/N]')
+a = input(f'{Fore.GREEN}Do you want to install all the tools?\n[Y/N]')
 
 
 if(a =="Y" or a== "y"):
@@ -19,5 +23,11 @@ if(a =="Y" or a== "y"):
 	print ('Installation successful!')
 
 
-else:
+elif(a =="N" or a== "n"):
 	pass
+
+else:
+	print ('Something unexpected happened')
+	
+
+
