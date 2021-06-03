@@ -10,7 +10,8 @@ A script installer for pentesting tools
 
 ```
 sudo su
-gitclone https://github.com/NeKroFR/n0k-tools.git
+git clone https://github.com/NeKroFR/n0k-tools.git
+cd n0k-tools/
 python3
 pip install colorama
 exit()
