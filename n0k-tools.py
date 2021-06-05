@@ -1,8 +1,17 @@
 #!/usr/bin/python3
 
+
+import os
+import sys, traceback
 import colorama
 from colorama import Fore, Back, Style
 colorama.init(autoreset=True)
+
+
+if os.getuid() != 0:
+	print ("Sorry. This script requires sudo privledges")
+	sys.exit()
+
 
 print(f'''{Fore.MAGENTA}
 ███╗   ██╗ ██████╗ ██╗  ██╗  ████████╗ ██████╗  ██████╗ ██╗     ███████╗
@@ -19,8 +28,9 @@ a = input(f'{Fore.GREEN}Do you want to install all the tools?\n[Y/N]')
 
 
 if(a =="Y" or a== "y"):
-	print ('Installing packages...')
-	print ('Installation successful!')
+    print("")
+    print("Installing packages...")
+    print("Installation successful!")
 
 
 elif(a =="N" or a== "n"):
@@ -29,5 +39,4 @@ elif(a =="N" or a== "n"):
 else:
 	print ('Something unexpected happened')
 	
-
 
