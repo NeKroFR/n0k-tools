@@ -37,6 +37,6 @@ elif(a =="N" or a== "n"):
 	pass
 
 else:
-	print ('{Fore.RED}Something unexpected happened')
+	print (f'{Fore.RED}Something unexpected happened')
 	
 
