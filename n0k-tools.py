@@ -9,7 +9,7 @@ colorama.init(autoreset=True)
 
 
 if os.getuid() != 0:
-	print ("Sorry. This script requires sudo privledges")
+	print ("Sorry. This script requires sudo privleges")
 	sys.exit()
 
 
@@ -37,6 +37,6 @@ elif(a =="N" or a== "n"):
 	pass
 
 else:
-	print ('Something unexpected happened')
+	print ('{Fore.RED}Something unexpected happened')
 	
 
