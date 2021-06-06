@@ -13,7 +13,7 @@ if os.getuid() != 0:
 	sys.exit()
 
 
-f = open(".packages", "r")
+f = open("packages", "r")
 
 pkg = f.read().replace("\n", " ")
 
