@@ -13,6 +13,10 @@ if os.getuid() != 0:
 	sys.exit()
 
 
+f = open(".packages", "r")
+
+pkg = f.read().replace("\n", " ")
+
 print(f'''{Fore.MAGENTA}
 ███╗   ██╗ ██████╗ ██╗  ██╗  ████████╗ ██████╗  ██████╗ ██╗     ███████╗
 ████╗  ██║██╔═████╗██║ ██╔╝  ╚══██╔══╝██╔═══██╗██╔═══██╗██║     ██╔════╝
@@ -30,6 +34,7 @@ a = input(f'{Fore.GREEN}Do you want to install all the tools?\n[Y/N]')
 if(a =="Y" or a== "y"):
     print("")
     print("Installing packages...")
+    cmd = os.system("apt-get install "+ pkg)
     print("Installation successful!")
 
 
