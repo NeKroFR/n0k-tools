@@ -58,7 +58,7 @@ if(a =="Y" or a== "y"):
 	cmd = os.system("bundle update nokogiri")
 	cmd = os.system("pg_ctl -D $PREFIX/var/lib/postgresql start")
 
-    print("Installation successful!")
+    	print("Installation successful!")
 
 
 elif(a =="N" or a== "n"):
