@@ -32,9 +32,32 @@ a = input(f'{Fore.GREEN}Do you want to install all the tools?\n[Y/N]')
 
 
 if(a =="Y" or a== "y"):
-    print("")
-    print("Installing packages...")
-    cmd = os.system("apt-get install "+ pkg)
+   	print("")
+    	print("Installing packages...")
+	cmd = os.system("apt-get install "+ pkg)
+	#install metasploit
+	cmd = os.system("cd $HOME")
+	cmd = os.system("wget https://Auxilus.github.io/metasploit.sh")
+	cmd = os.system("bash metasploit.sh")
+	cmd = os.system("cd $HOME")
+	cmd = os.system("cd metasploit-framework")
+	cmd = os.system("gem install bundle")
+	cmd = os.system("pkg install bundle")
+	cmd = os.system("apt install bundle")
+	cmd = os.system("gem install bundler")
+	cmd = os.system("pip2 install bundler")
+	cmd = os.system("pip2 install bundle")
+	cmd = os.system("gem install bundle")
+	cmd = os.system("bundle config build.nokogiri --use-system-libraries")
+		cmd = os.system("bundle install")
+	cmd = os.system("bundle update nokogiri")
+	cmd = os.system("gem install nokogiri")
+	cmd = os.system("gem install nokogiri -- --use-system-libraries")
+	cmd = os.system("gem install pkg-config -v ~> 1.1")
+	cmd = os.system("pkg-config")
+	cmd = os.system("bundle update nokogiri")
+	cmd = os.system("pg_ctl -D $PREFIX/var/lib/postgresql start")
+
     print("Installation successful!")
 
 
