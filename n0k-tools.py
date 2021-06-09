@@ -49,7 +49,7 @@ if(a =="Y" or a== "y"):
 	cmd = os.system("pip2 install bundle")
 	cmd = os.system("gem install bundle")
 	cmd = os.system("bundle config build.nokogiri --use-system-libraries")
-		cmd = os.system("bundle install")
+	cmd = os.system("bundle install")
 	cmd = os.system("bundle update nokogiri")
 	cmd = os.system("gem install nokogiri")
 	cmd = os.system("gem install nokogiri -- --use-system-libraries")
