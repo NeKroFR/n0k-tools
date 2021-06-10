@@ -13,5 +13,10 @@ if [ "$(whoami)" != "root" ]; then
         exit 255
 fi
 
-apt-get update  
+echo "${green}Do you want to install all the tools?\n[Y/N]"
 
+read choice
+
+echo $choice 
+
+apt-get update  
