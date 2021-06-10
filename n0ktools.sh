@@ -13,10 +13,31 @@ if [ "$(whoami)" != "root" ]; then
         exit 255
 fi
 
+echo "${purple}███╗   ██╗ ██████╗ ██╗  ██╗  ████████╗ ██████╗  ██████╗ ██╗     ███████╗"
+echo "${purple}████╗  ██║██╔═████╗██║ ██╔╝  ╚══██╔══╝██╔═══██╗██╔═══██╗██║     ██╔════╝"
+echo "${purple}██╔██╗ ██║██║██╔██║█████╔╝█████╗██║   ██║   ██║██║   ██║██║     ███████╗"
+echo "${purple}██║╚██╗██║████╔╝██║██╔═██╗╚════╝██║   ██║   ██║██║   ██║██║     ╚════██║"
+echo "${purple}██║ ╚████║╚██████╔╝██║  ██╗     ██║   ╚██████╔╝╚██████╔╝███████╗███████║\n"
+
+
+
 echo "${green}Do you want to install all the tools?\n[Y/N]"
 
 read choice
 
-echo $choice 
 
-apt-get update  
+
+if [[$choice == y]] | if [[$choice == Y]]; then
+        echo "yes"
+
+if [[$choice == n]] | if [[$choice == N]]; then
+        echo "no"
+
+
+else
+        echo "${red}Something unexpected happened"
+
+~
+~
+~
+~
