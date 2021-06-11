@@ -22,7 +22,7 @@ echo "${purple}██║ ╚████║╚██████╔╝██║ 
 
 
 
-echo "${green}Do you want to install all the tools?\n[Y/N]"
+printf "${green}Do you want to install all the tools?\n[Y/N]"
 
 read choice
 
