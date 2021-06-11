@@ -27,18 +27,11 @@ printf "${green}Do you want to install all the tools?\n[Y/N]"
 read choice
 
 
+case "$choice" in
+    "y" | "Y") echo YES
+    
+    "n" | "N") echo NO
 
-if [[$choice == y]] | if [[$choice == Y]]; then
-        echo "yes"
+*)        echo "${red}Something unexpected happened"
 
-if [[$choice == n]] | if [[$choice == N]]; then
-        echo "no"
-
-
-else
-        echo "${red}Something unexpected happened"
-
-~
-~
-~
-~
+esac
