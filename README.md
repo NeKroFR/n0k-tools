@@ -12,6 +12,5 @@ A script installer for pentesting tools
 sudo git clone https://github.com/NeKroFR/n0k-tools.git
 cd n0k-tools/
 sudo chmod +x *
-sudo ./requierment.sh
-sudo ./n0k-tools.py
+sudo ./n0ktools.sh
 ```
