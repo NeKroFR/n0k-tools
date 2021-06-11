@@ -6,6 +6,7 @@ green=`echo -en "\e[32m"`
 purple=`echo -en "\e[35m"`
 default=`echo -en "\e[39m"`
  
+clear
 
 
 if [ "$(whoami)" != "root" ]; then
