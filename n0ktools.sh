@@ -9,6 +9,9 @@ default=`echo -en "\e[39m"`
 clear
 
 
+pkg = 'packages'
+
+
 if [ "$(whoami)" != "root" ]; then
         echo  "${red}Sorry. This script requires sudo privleges"
         exit 255
@@ -31,6 +34,10 @@ read choice
 case "$choice" in
     "y" | "Y")
         echo "Installing packages..." ;;
+        while read line; do
+        echo "apt install $line"
+        n=$((n+1))
+        done < $pkg
     
     "n" | "N")
         exit ;;
