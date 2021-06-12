@@ -9,7 +9,6 @@ default=`echo -en "\e[39m"`
 clear
 
 
-pkg = 'packages'
 
 
 if [ "$(whoami)" != "root" ]; then
@@ -33,12 +32,10 @@ read choice
 
 case "$choice" in
     "y" | "Y")
-        echo "Installing packages..." ;;
-        while read line; do
-        echo "apt install $line"
-        n=$((n+1))
-        done < $pkg
-    
+        echo "Installing packages..." 
+        while read line; do echo apt-get install $line; done < packages
+        
+        ;;
     "n" | "N")
         exit ;;
 
