@@ -23,13 +23,14 @@ echo "${purple}██║ ╚████║╚██████╔╝██║ 
 
 
 printf "${green}Do you want to install all the tools?\n[Y/N]"
+printf "${default}"
 
 read choice
 
 
 case "$choice" in
     "y" | "Y")
-        echo "YES" ;;
+        echo "Installing packages..." ;;
     
     "n" | "N")
         exit ;;
@@ -38,4 +39,3 @@ case "$choice" in
         echo "${red}Something unexpected happened"
 
 esac
-
