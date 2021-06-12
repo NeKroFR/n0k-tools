@@ -32,7 +32,7 @@ case "$choice" in
         echo "YES" ;;
     
     "n" | "N")
-        echo "NO" ;;
+        exit ;;
 
     *)
         echo "${red}Something unexpected happened"
