@@ -28,10 +28,14 @@ read choice
 
 
 case "$choice" in
-    "y" | "Y") echo YES
+    "y" | "Y")
+        echo "YES" ;;
     
-    "n" | "N") echo NO
+    "n" | "N")
+        echo "NO" ;;
 
-*)        echo "${red}Something unexpected happened"
+    *)
+        echo "${red}Something unexpected happened"
 
 esac
+
