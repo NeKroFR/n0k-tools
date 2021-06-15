@@ -32,9 +32,16 @@ read choice
 
 case "$choice" in
     "y" | "Y")
+        echo "Updating packages..." 
+        sudo apt-get update
         echo "Installing packages..." 
         while read line; do echo apt-get install $line; done < packages
-        
+        echo "Installing searchsploit..." 
+        sudo git clone https://github.com/offensive-security/exploitdb.git /opt/exploitdb
+        sudo ln -sf /opt/exploitdb/searchsploit /usr/local/bin/searchsploit
+        searchsploit -h
+        searchsploit -u
+        echo "Installing metasploit..."         
         ;;
     "n" | "N")
         exit ;;
