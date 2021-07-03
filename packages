@@ -1,3 +1,5 @@
+python2
+python3
 john 
 nmap
 netcat
@@ -7,4 +9,3 @@ sqlmap
 hashcat
 smbmap
 smbclient
-
