@@ -49,6 +49,23 @@ case "$choice" in
         echo "Installing tplmap..." 
         sudo add-apt-repository universe
         curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py
+        sudo python2 get-pip.py
+        pip2 install PyYAML
+        pip2 install certifi
+        pip2 install chardet
+        pip2 install idna
+        pip2 install requests
+        pip2 install urllib3
+        pip2 install wsgiref
+        mkdir scripts
+        cd /scripts
+        git clone https://github.com/epinna/tplmap.git
+        cd tplmap/
+        sudo chmod +x *
+        cd ../../
+
+
+        
         
         
 
