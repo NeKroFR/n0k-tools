@@ -32,6 +32,7 @@ echo "${default}"
 
 case "$choice" in
     "y" | "Y")
+        cd ../
         echo "Updating packages..." 
         sudo apt-get update
         echo "Installing packages..." 
@@ -45,6 +46,11 @@ case "$choice" in
         curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && \
         chmod 755 msfinstall && \
         ./msfinstall
+        echo "Installing tplmap..." 
+        sudo add-apt-repository universe
+        curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py
+        
+        
 
         ;;
     "n" | "N")
