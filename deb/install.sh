@@ -32,7 +32,7 @@ echo "${default}"
 
 case "$choice" in
     "y" | "Y")
-        cd ../
+        cd ../../
         echo "Updating packages..." 
         sudo apt-get update
         echo "Installing packages..." 
