@@ -46,7 +46,12 @@ case "$choice" in
         makepkg -si   
         cd ../
         rm -R gobuster
-
+        echo "Installing john"
+        git clone https://aur.archlinux.org/john-git.git 
+        cd john-git  
+        makepkg -si
+        cd ../
+        rm john-git 
 
         ;;
     "n" | "N")
