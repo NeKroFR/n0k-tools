@@ -33,10 +33,20 @@ echo "${default}"
 case "$choice" in
     "y" | "Y")
         cd ../
-        echo "Updating packages..." 
-        
-        
-        
+        echo "Initialisation..." 
+        sudo pacman -Syyu
+        pacman -S python2
+        pacman -S python3
+        sudo pacman -S base-devel
+        echo "Installing packages..."
+        cd ../../
+        echo "Installing gobuster"
+        git clone https://aur.archlinux.org/gobuster.git
+        cd gobuster                  
+        makepkg -si   
+        cd ../
+        rm -R gobuster
+
 
         ;;
     "n" | "N")
@@ -46,3 +56,4 @@ case "$choice" in
         echo "${red}Something unexpected happened"
 
 esac
+
