@@ -61,6 +61,8 @@ case "$choice" in
         sudo pacman -S sqlmap  
         echo "Installing hashcat"     
         sudo pacman -S hashcat
+        echo "Installing metasploit..."  
+
         ;;
     "n" | "N")
         exit ;;
