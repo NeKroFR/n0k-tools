@@ -55,8 +55,12 @@ case "$choice" in
         rm john-git
         echo "Installing nmap"
         pacman -S nmap
-        
-        
+        echo "Installing netcat"
+        sudo pacman -S gnu-netcat
+        echo "Installing sqlmap"
+        sudo pacman -S sqlmap  
+        echo "Installing hashcat"     
+        sudo pacman -S hashcat
         ;;
     "n" | "N")
         exit ;;
