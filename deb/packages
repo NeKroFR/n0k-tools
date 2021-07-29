@@ -4,8 +4,5 @@ john
 nmap
 netcat
 gobuster
-nikto
 sqlmap 
 hashcat
-smbmap
-smbclient
