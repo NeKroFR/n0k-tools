@@ -35,6 +35,7 @@ case "$choice" in
         cd ../
         echo "Initialisation..." 
         sudo pacman -Syyu
+        sudo pacman -S yay
         pacman -S python2
         pacman -S python3
         sudo pacman -S base-devel
@@ -51,8 +52,11 @@ case "$choice" in
         cd john-git  
         makepkg -si
         cd ../
-        rm john-git 
-
+        rm john-git
+        echo "Installing nmap"
+        pacman -S nmap
+        
+        
         ;;
     "n" | "N")
         exit ;;
