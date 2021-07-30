@@ -62,6 +62,13 @@ case "$choice" in
         echo "Installing hashcat"     
         sudo pacman -S hashcat
         echo "Installing metasploit..."  
+        sudo pacman -S metasploit
+
+
+        
+        echo "Updates..."
+        sudo pacman -Syyu
+        echo "${green}Installation succesful !${default}"           
 
         ;;
     "n" | "N")
