@@ -43,7 +43,9 @@ case "$choice" in
         searchsploit -h
         searchsploit -u
         echo "Installing metasploit..."  
-
+        curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall
+        chmod +x msfinstall
+        ./msfinstall
 
         
         
