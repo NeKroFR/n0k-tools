@@ -61,6 +61,12 @@ case "$choice" in
         sudo pacman -S sqlmap  
         echo "Installing hashcat"     
         sudo pacman -S hashcat
+        echo "Installing hydra"
+        git clone https://aur.archlinux.org/hydra-git.git
+        cd hydra-git
+        makepkg -si
+        cd ../
+        rm hydra-git
         echo "Installing metasploit..."  
         sudo pacman -S metasploit
 
