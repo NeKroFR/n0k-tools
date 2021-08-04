@@ -69,12 +69,6 @@ case "$choice" in
         rm -R hydra-git
         echo "Installing metasploit..."  
         sudo pacman -S metasploit
-        echo "Installing sqlmap..." 
-        git clone https://aur.archlinux.org/sqlmap-git.git
-        cd sqlmap-git
-        makepkg -si
-        cd ../
-        rm -R sqlmap-git
 
 
 
