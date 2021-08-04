@@ -52,7 +52,7 @@ case "$choice" in
         cd john-git  
         makepkg -si
         cd ../
-        rm john-git
+        rm -R john-git
         echo "Installing nmap"
         pacman -S nmap
         echo "Installing netcat"
@@ -66,9 +66,16 @@ case "$choice" in
         cd hydra-git
         makepkg -si
         cd ../
-        rm hydra-git
+        rm -R hydra-git
         echo "Installing metasploit..."  
         sudo pacman -S metasploit
+        echo "Installing sqlmap..." 
+        git clone https://aur.archlinux.org/sqlmap-git.git
+        cd sqlmap-git
+        makepkg -si
+        cd ../
+        rm -R sqlmap-git
+
 
 
         
