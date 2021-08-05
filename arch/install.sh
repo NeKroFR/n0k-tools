@@ -39,6 +39,15 @@ case "$choice" in
         pacman -S python2
         pacman -S python3
         sudo pacman -S base-devel
+        git clone https://aur.archlinux.org/snapd.git
+        cd snapd
+        makepkg -si
+        sudo systemctl enable --now snapd.socket
+        sudo ln -s /var/lib/snapd/snap /snap
+        cd ../
+        rm -R snapd
+        snap refresh
+        
         echo "Installing packages..."
         cd ../../
         echo "Installing gobuster"
@@ -68,7 +77,10 @@ case "$choice" in
         cd ../
         rm -R hydra-git
         echo "Installing metasploit..."  
-        sudo pacman -S metasploit
+        pacman -S metasploit
+        echo "Installing sqlmap..."  
+        snap install sqlmap
+
 
 
 
