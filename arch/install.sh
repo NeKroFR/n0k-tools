@@ -80,6 +80,12 @@ case "$choice" in
         pacman -S metasploit
         echo "Installing sqlmap..."  
         snap install sqlmap
+        echo "Installing FFUF..."
+        git clone https://aur.archlinux.org/ffuf.git                                                                                                                                                        ✔ 
+        makepkg -si       
+        cd ../
+        sudo rm -R ffuf                                                                                                                                                                                     ✔ 
+
 
 
 
@@ -97,4 +103,3 @@ case "$choice" in
         echo "${red}Something unexpected happened"
 
 esac
-
