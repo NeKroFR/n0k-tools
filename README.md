@@ -5,7 +5,7 @@ A script installer for pentesting tools
 
 # installation:
 
-## debian
+## debian (useless)
 ```
 sudo git clone https://github.com/NeKroFR/n0k-tools.git
 cd n0k-tools/deb/
