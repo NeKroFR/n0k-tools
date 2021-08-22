@@ -84,7 +84,9 @@ case "$choice" in
         git clone https://aur.archlinux.org/ffuf.git                                                                                                                                                        ✔ 
         makepkg -si       
         cd ../
-        sudo rm -R ffuf                                                                                                                                                                                     ✔ 
+        sudo rm -R ffuf
+        echo "Installing nikto..."
+        sudo pacman -S nikto 
 
 
 
