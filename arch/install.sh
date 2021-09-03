@@ -47,6 +47,7 @@ case "$choice" in
         cd ../
         rm -R snapd
         snap refresh
+        mkdir Tools
         
         echo "Installing packages..."
         cd ../../
@@ -88,10 +89,11 @@ case "$choice" in
         echo "Installing nikto..."
         sudo pacman -S nikto
         echo "Installing Sublist3r..."        
+        cd Tools
         git clone https://github.com/aboul3la/Sublist3r.git
         cd Sublist3r
         sudo pip install -r requirements.txt
-
+ 
 
 
 
