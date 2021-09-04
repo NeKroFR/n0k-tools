@@ -49,6 +49,12 @@ case "$choice" in
         snap refresh
         mkdir Tools
         
+        echo "Installing Wordlists..."
+        mkdir wordlists
+        cd wordlists
+        wget https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/DNS/subdomains-top1million-110000.txt
+        wget https://raw.githubusercontent.com/daviddias/node-dirbuster/master/lists/directory-list-2.3-medium.txt
+        cd ../
         echo "Installing packages..."
         cd ../../
         echo "Installing gobuster"
