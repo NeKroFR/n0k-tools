@@ -34,13 +34,13 @@ case "$choice" in
     "y" | "Y")
         cd ../
         echo "Initialisation..." 
-        sudo pacman -Syyu
-        sudo pacman -S yay
-        pacman -S python2
-        pacman -S python3
-        sudo pacman -S base-devel
+        sudo pacman -Syyu --noconfirm
+        sudo pacman -S yay --noconfirm
+        pacman -S python2 --noconfirm
+        pacman -S python3 --noconfirm
+        sudo pacman -S base-devel --noconfirm
         git clone https://aur.archlinux.org/snapd.git
-        cd snapd
+        cd snapd 
         makepkg -si
         sudo systemctl enable --now snapd.socket
         sudo ln -s /var/lib/snapd/snap /snap
@@ -71,13 +71,13 @@ case "$choice" in
         cd ../
         rm -R john-git
         echo "Installing nmap"
-        pacman -S nmap
+        pacman -S nmap --noconfirm 
         echo "Installing netcat"
-        sudo pacman -S gnu-netcat
+        sudo pacman -S gnu-netcat --noconfirm
         echo "Installing sqlmap"
-        sudo pacman -S sqlmap  
+        sudo pacman -S sqlmap   --noconfirm
         echo "Installing hashcat"     
-        sudo pacman -S hashcat
+        sudo pacman -S hashcat --noconfirm
         echo "Installing hydra"
         git clone https://aur.archlinux.org/hydra-git.git
         cd hydra-git
@@ -85,7 +85,7 @@ case "$choice" in
         cd ../
         rm -R hydra-git
         echo "Installing metasploit..."  
-        pacman -S metasploit
+        pacman -S metasploit --noconfirm
         echo "Installing sqlmap..."  
         snap install sqlmap
         echo "Installing FFUF..."
@@ -94,7 +94,7 @@ case "$choice" in
         cd ../
         sudo rm -R ffuf
         echo "Installing nikto..."
-        sudo pacman -S nikto
+        sudo pacman -S nikto --noconfirm
         echo "Installing Sublist3r..."        
         cd Tools
         git clone https://github.com/aboul3la/Sublist3r.git
@@ -106,7 +106,7 @@ case "$choice" in
 
         
         echo "Updates..."
-        sudo pacman -Syyu
+        sudo pacman -Syyu --noconfirm
         echo "${green}Installation succesful !${default}"           
 
         ;;
